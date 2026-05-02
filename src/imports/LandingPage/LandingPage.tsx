@@ -3904,7 +3904,7 @@ function SaaSLandingPage() {
   );
 }
 
-export default function Frame3() {
+export default function LandingPage() {
   return (
     <div className="relative size-full">
       <SaaSLandingPage />
