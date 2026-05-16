@@ -676,7 +676,7 @@ function Group47() {
     <div className="absolute contents left-[131.34px] top-[51px]">
       <div className="absolute bg-[#313131] h-[54.042px] left-[131.34px] rounded-[9.457px] top-[51px] w-[52.691px]" />
       <div className="absolute left-[131.34px] size-[52.077px] top-[52.92px]" data-name="Memoji Boys 6-18">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgMemojiBoys618} />
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgMemojiBoys618} loading="lazy" />
       </div>
     </div>
   );
@@ -709,7 +709,7 @@ function Group101() {
       <Group47 />
       <Group68 />
       <div className="absolute inset-[31.32%_23.63%_27.87%_24.67%]" data-name="42 11">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img4211} />
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img4211} loading="lazy" />
       </div>
       <Group89 />
       <p className="absolute font-['Inter:Light',sans-serif] font-light leading-[normal] left-[74.24px] not-italic text-[#16ab5e] text-[27.304px] top-[61.54px] whitespace-nowrap">+</p>
@@ -730,7 +730,7 @@ function Group102() {
     <div className="absolute contents left-[202px] top-[51px]">
       <Group67 />
       <div className="absolute inset-[15.19%_17.02%_73.97%_69.25%]" data-name="21 5">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img215} />
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img215} loading="lazy" />
       </div>
     </div>
   );
@@ -994,19 +994,23 @@ function ProductCarousel() {
         className="absolute content-stretch flex gap-[8px] items-start left-[186px] p-[8px] top-[1586px]"
         data-name="arrow"
       >
-        <div
-          className="content-stretch flex items-center justify-center p-[12px] relative rounded-[99px] shrink-0 cursor-pointer"
+        <button
+          type="button"
+          aria-label="Previous product"
+          className="content-stretch flex items-center justify-center p-[12px] relative rounded-[99px] shrink-0 cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"
           onClick={prev}
         >
           <NavigateBefore />
-        </div>
-        <div
-          className="content-stretch flex items-center justify-center p-[12px] relative rounded-[99px] shrink-0 cursor-pointer"
+        </button>
+        <button
+          type="button"
+          aria-label="Next product"
+          className="content-stretch flex items-center justify-center p-[12px] relative rounded-[99px] shrink-0 cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"
           onClick={next}
         >
           <div aria-hidden="true" className="absolute border-2 border-[#333647] border-solid inset-0 pointer-events-none rounded-[99px]" />
           <NavigateNext />
-        </div>
+        </button>
       </div>
     </>
   );
@@ -1092,7 +1096,7 @@ function Group48() {
     <div className="absolute contents left-[854.34px] top-[674px]">
       <div className="absolute bg-[#313131] h-[54.042px] left-[854.34px] rounded-[9.457px] top-[674px] w-[52.691px]" />
       <div className="absolute left-[854.34px] size-[52.077px] top-[675.92px]" data-name="Memoji Boys 6-18">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgMemojiBoys618} />
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgMemojiBoys618} loading="lazy" />
       </div>
     </div>
   );
@@ -1143,10 +1147,10 @@ function Group98() {
       <Group66 />
       <Group70 />
       <div className="absolute inset-[12.68%_32.31%_86.52%_64.69%]" data-name="42 11">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img4211} />
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img4211} loading="lazy" />
       </div>
       <div className="absolute inset-[12.68%_27.35%_86.56%_69.79%]" data-name="21 5">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img215} />
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img215} loading="lazy" />
       </div>
       <Group90 />
       <p className="absolute font-['Inter:Light',sans-serif] font-light leading-[normal] left-[797.24px] not-italic text-[#16ab5e] text-[27.304px] top-[684.54px] whitespace-nowrap">+</p>
@@ -1743,7 +1747,7 @@ function Group49() {
     <div className="absolute contents left-[1183.7px] top-[451.49px]">
       <div className="absolute bg-[#313131] h-[37.16px] left-[1183.7px] rounded-[6.503px] top-[451.49px] w-[36.231px]" />
       <div className="absolute left-[1183.7px] size-[35.809px] top-[452.81px]" data-name="Memoji Boys 6-18">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgMemojiBoys618} />
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgMemojiBoys618} loading="lazy" />
       </div>
     </div>
   );
@@ -1794,10 +1798,10 @@ function Group104() {
       <Group72 />
       <Group73 />
       <div className="absolute inset-[8.49%_12.05%_90.95%_85.89%]" data-name="42 11">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img4211} />
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img4211} loading="lazy" />
       </div>
       <div className="absolute inset-[8.49%_8.64%_90.98%_89.39%]" data-name="21 5">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img215} />
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img215} loading="lazy" />
       </div>
       <Group91 />
       <p className="absolute font-['Inter:Light',sans-serif] font-light leading-[normal] left-[1144.43px] not-italic text-[#16ab5e] text-[18.774px] top-[458.74px] whitespace-nowrap">+</p>
@@ -2345,7 +2349,7 @@ function Group50() {
     <div className="absolute contents left-[-65.18px] top-[146px]">
       <div className="absolute bg-[#313131] h-[97.276px] left-[-65.18px] rounded-[17.023px] top-[146px] w-[94.844px]" />
       <div className="absolute left-[-65.18px] size-[93.738px] top-[149.45px]" data-name="Memoji Boys 6-18">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgMemojiBoys618} />
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgMemojiBoys618} loading="lazy" />
       </div>
     </div>
   );
@@ -2396,10 +2400,10 @@ function Group105() {
       <Group75 />
       <Group76 />
       <div className="absolute inset-[17.56%_89.49%_73.81%_5.13%]" data-name="42 11">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img4211} />
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img4211} loading="lazy" />
       </div>
       <div className="absolute inset-[17.56%_80.55%_74.2%_14.3%]" data-name="21 5">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img215} />
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img215} loading="lazy" />
       </div>
       <Group92 />
       <p className="absolute font-['Inter:Light',sans-serif] font-light leading-[normal] left-[-167.96px] not-italic text-[#16ab5e] text-[49.146px] top-[164.97px] whitespace-nowrap">+</p>
@@ -3330,7 +3334,7 @@ function Group82() {
     <div className="absolute contents left-[917.12px] top-[466.62px]">
       <div className="absolute bg-[#313131] h-[37.814px] left-[917.12px] rounded-[6.617px] top-[466.62px] w-[36.869px]" />
       <div className="absolute left-[917.12px] size-[36.439px] top-[467.96px]" data-name="Memoji Boys 6-18">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgMemojiBoys618} />
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgMemojiBoys618} loading="lazy" />
       </div>
     </div>
   );
@@ -3349,7 +3353,7 @@ function Group84() {
     <div className="absolute contents left-[1099.53px] top-[42.49px]">
       <div className="absolute bg-[#1b1b1b] h-[35.854px] left-[1099.53px] rounded-[6.274px] top-[42.49px] w-[34.957px]" />
       <div className="absolute left-[1099.53px] size-[34.55px] top-[43.76px]" data-name="Memoji Boys 6-18">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgMemojiBoys618} />
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgMemojiBoys618} loading="lazy" />
       </div>
     </div>
   );
@@ -3360,7 +3364,7 @@ function Group107() {
     <div className="absolute contents left-[32.87px] top-[675.88px]">
       <div className="absolute bg-[#313131] h-[35.854px] left-[32.87px] rounded-[6.274px] top-[675.88px] w-[34.957px]" />
       <div className="absolute left-[32.87px] size-[34.55px] top-[677.15px]" data-name="Memoji Boys 6-18">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgMemojiBoys618} />
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgMemojiBoys618} loading="lazy" />
       </div>
     </div>
   );
@@ -3866,10 +3870,10 @@ function DesktopOriginal() {
       <Group87 />
       <Group88 />
       <div className="absolute inset-[57.41%_13.27%_38.92%_84.12%]" data-name="42 11">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img4211} />
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img4211} loading="lazy" />
       </div>
       <div className="absolute inset-[57.41%_8.94%_39.08%_88.56%]" data-name="21 5">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img215} />
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img215} loading="lazy" />
       </div>
       <Group108 />
       <div className="absolute bg-[#313131] h-[37.683px] left-[864.29px] rounded-[6.414px] top-[561.23px] w-[250.148px]" />

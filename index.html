@@ -3,9 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UIfry</title>
+    <meta name="description" content="UIfry — a modern UI component library and app shell built with React, Tailwind CSS, Radix UI, and MUI." />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#000000" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- iOS PWA -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="UIfry" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="UIfry — Modern UI Components" />
+    <meta property="og:description" content="A modern UI component library and app shell built with React, Tailwind CSS, Radix UI, and MUI." />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="UIfry" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="UIfry — Modern UI Components" />
+    <meta name="twitter:description" content="A modern UI component library and app shell built with React, Tailwind CSS, Radix UI, and MUI." />
+
+    <title>UIfry — Modern UI Components</title>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "UIfry",
+      "description": "A modern UI component library and app shell built with React, Tailwind CSS, Radix UI, and MUI.",
+      "url": "/"
+    }
+    </script>
   </head>
   <body>
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:px-4 focus:py-2 focus:bg-white focus:text-black focus:rounded">
+      Skip to main content
+    </a>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
