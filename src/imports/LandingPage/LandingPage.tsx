@@ -1,3 +1,4 @@
+import { useState, useRef } from "react";
 import svgPaths from "./svg-00opu02yt8";
 import imgMemojiBoys618 from "./9318a2556f09aa6ed839fa7b57767edf7998c27a.png";
 import img4211 from "./acc555fcae8944d537bb4f687e174da6c6cb4b25.png";
@@ -926,6 +927,88 @@ function Arrow() {
       <Button2 />
       <Button3 />
     </div>
+  );
+}
+
+function ProductCarousel() {
+  const n = 6;
+  const step = 324;
+  // Start in the middle set so we have buffer in both directions
+  const [pos, setPos] = useState(n);
+  const [animated, setAnimated] = useState(true);
+  const posRef = useRef(n);
+
+  const prev = () => {
+    const next = posRef.current - 1;
+    posRef.current = next;
+    setAnimated(true);
+    setPos(next);
+  };
+
+  const next = () => {
+    const next = posRef.current + 1;
+    posRef.current = next;
+    setAnimated(true);
+    setPos(next);
+  };
+
+  // After each animation, silently snap back into the middle set if we slid into a clone
+  const onTransitionEnd = () => {
+    const p = posRef.current;
+    if (p < n) {
+      const snapped = p + n;
+      posRef.current = snapped;
+      setAnimated(false);
+      setPos(snapped);
+    } else if (p >= n * 2) {
+      const snapped = p - n;
+      posRef.current = snapped;
+      setAnimated(false);
+      setPos(snapped);
+    }
+  };
+
+  return (
+    <>
+      <div
+        className="absolute content-stretch flex gap-[24px] items-start left-[-137px] top-[1158px]"
+        style={{
+          transform: `translateX(-${pos * step}px)`,
+          transition: animated ? "transform 0.4s ease" : "none",
+        }}
+        onTransitionEnd={onTransitionEnd}
+        data-name="SaaS Landing Page"
+      >
+        {Array.from({ length: n * 3 }, (_, i) => {
+          switch (i % n) {
+            case 0: return <Product key={i} />;
+            case 1: return <ProductHover key={i} />;
+            case 2: return <Product1 key={i} />;
+            case 3: return <Product2 key={i} />;
+            case 4: return <Product3 key={i} />;
+            default: return <Product4 key={i} />;
+          }
+        })}
+      </div>
+      <div
+        className="absolute content-stretch flex gap-[8px] items-start left-[186px] p-[8px] top-[1586px]"
+        data-name="arrow"
+      >
+        <div
+          className="content-stretch flex items-center justify-center p-[12px] relative rounded-[99px] shrink-0 cursor-pointer"
+          onClick={prev}
+        >
+          <NavigateBefore />
+        </div>
+        <div
+          className="content-stretch flex items-center justify-center p-[12px] relative rounded-[99px] shrink-0 cursor-pointer"
+          onClick={next}
+        >
+          <div aria-hidden="true" className="absolute border-2 border-[#333647] border-solid inset-0 pointer-events-none rounded-[99px]" />
+          <NavigateNext />
+        </div>
+      </div>
+    </>
   );
 }
 
@@ -3842,10 +3925,9 @@ function SaaSLandingPage() {
       <Heading />
       <CursorPointer />
       <Bg />
-      <SaaSLandingPage1 />
+      <ProductCarousel />
       <Heading1 />
       <Button1 />
-      <Arrow />
       <CursorPointer1 />
       <Vector2 />
       <Group97 />
